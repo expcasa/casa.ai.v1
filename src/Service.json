@@ -1,0 +1,32 @@
+[
+    {
+      "id":"1" ,
+      "svg": "Fast.svg",
+      "h1": "3x faster",
+      "p": "With advanced search and match capabilities, find properties that meet your needs quickly.Say goodbye to endless scrolling and find your dream property in record time with Casa."
+    },
+    {
+      "id":"2" ,
+      "svg": "Endless.svg",
+      "h1": "Endless List of Criteria",
+      "p": "Choose from various criteria like location, price, size, and amenities. Add custom criteria and prioritize them to reflect your preferences accurately."
+    },
+    {
+      "id":"3" ,
+      "svg": "Compare.svg",
+      "h1": "Side-by-side comparison",
+      "p": "Compare properties side-by-side with detailed breakdowns, easily identifying strengths and weaknesses at a glance."
+    },
+    {
+      "id":"4" ,
+      "svg": "monitoring_36dp_5F6368_FILL0_wght400_GRAD0_opsz40 (1) 1.svg",
+      "h1": "Data-Driven Decisions",
+      "p": "Remove guesswork with side-by-side comparisons and calculated metrics like ROI, cash flow, and potential appreciation, ensuring informed investment decisions."
+    },
+    {
+      "id":"5" ,
+      "svg": "Fav.svg",
+      "h1": "Save and Share",
+      "p": "Save comparisons for future reference or share with family and friends. Collaboration is easy, whether buying solo or with a team."
+    }
+  ]
