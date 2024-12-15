@@ -251,6 +251,10 @@ justify-content: center;
   font-size: 30px;
 }
 /* landing end */
+@media (min-width: 1600px) {
+  .main-nav {
+    max-width: 3072px;
+  }
 .nav-compare {
   max-width: 3072px;
 }
@@ -258,33 +262,191 @@ justify-content: center;
   font-size: 35px;
 }
 /* compare-nav end */
-.main-compare {
+
+/* Compare-top */
+@media (min-width: 1600px) {
+  .compare-top {
   max-width: 3072px;
+margin-top: 130px;
+  }
+  .arw-compare{
+    position: relative;
+    left: 540px;
+    font-size: 30px;
+  }
+  .compare-toggle{
+    position: relative;
+    right: 600px;
+    font-size: 30px;
+    width:400px;
+    height:50px;
+  
+  }
+
 }
-.arw-compare{
-  font-size: 30px;
+
+@media (min-width: 1600px) {
+  .main-compare{
+    max-width: 3072px;
+    position: relative;
+    height: 800px;
+    left: 680px;
+    margin-top: 120px;
+  }
+  .main2-compare{
+    height:950px;
+    
+  }
+  .importance-compare{
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .imp-compare{
+    font-size: 22px;
+    margin-bottom: 125px;
+   
+  }
+
+  .compare-criteria{
+    font-size: 28px;
+
+    
+  }
+  .Criteria-compare{
+    font-size: 23px;
+    
+    
+  }
+  ul.Criteria-compare .space-1 {
+    margin-top: 16px;
+    padding-bottom: 1.4rem;
+    
+  }
+  ul.Criteria-compare .space-1 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-2 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-3 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-4 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-5 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-6 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-7 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-8 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-9 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-10 {
+    padding-bottom: 1.4rem;
+  }
+  ul.Criteria-compare .space-11{
+    padding-bottom: 1.4rem;
+  }
+            
+  
+  .Total-compare{
+    font-size: 24px;
+    padding-bottom: 1.4rem;
+  }
+  
+  .match-compare{
+    font-size: 20px;
+    word-spacing: 3.5px;
+    margin-bottom: 2px;
+    padding-bottom: 0.7rem;
+    padding-top: 0.1.9rem;
+
+  }
+  .address-compare{
+    font-size: 19px;
+    word-spacing: 7px;
+    letter-spacing: 2px;
+    
+
+  }
+  .button-compare{
+   font-size:20px;
+  }
+  .data-compare{
+    font-size: 18px;
+  }
+  .data-compare-1{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+
+  }
+  .data-compare-2{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+
+  }
+  .data-compare-3{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-4{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+
+  }
+  .data-compare-5{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+
+  }
+  .data-compare-6{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-7{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-8{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-9{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-10{
+    font-size: 25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .data-compare-11{
+    font-size:25px;
+    padding-bottom: 1.4rem;
+
+  }
+  .compare-final{
+    font-size: 22px;
+
+  }
 }
-.importance-compare{
-  font-size: 30px;
-}
-.red-compare{
-  font-size: 30px;
-}
-.yellow-compare{
-  font-size: 30px;
-}
-.blue-compare{
-  font-size: 30px;
+
 }
 }
-
-
-
-
-
-
-
-
-
-
-

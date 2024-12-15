@@ -3,9 +3,10 @@ import { GoArrowLeft } from "react-icons/go";
 import { Link } from "react-router-dom";
 function ComparisonTop({ isTotalVisible, setIsTotalVisible }) {
   return (
-    <div className="mt-24 ml-40 flex items-center justify-between">
+    
+    <div className="mt-20 ml-40 flex items-center justify-between compare-top">
       <Link to={"/Criteria"}>
-        <p className="text-gray inline-flex items-center">
+        <p className="text-gray inline-flex items-center arw-compare">
           <GoArrowLeft className="mr-2" />
           Back to main page
         </p>
@@ -18,7 +19,7 @@ function ComparisonTop({ isTotalVisible, setIsTotalVisible }) {
           onChange={() => setIsTotalVisible(!isTotalVisible)}
           className="sr-only peer"
         />
-        <div className="relative flex items-center h-8 rounded-full bg-white overflow-hidden w-52 ">
+        <div className="relative flex items-center h-8 rounded-full bg-white overflow-hidden w-52 compare-toggle">
           {/* Sliding background */}
           <div
             className={`absolute w-1/2 h-full bg-gray rounded-full transition-transform duration-300 ${
