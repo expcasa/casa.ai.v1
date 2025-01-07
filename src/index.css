@@ -16,7 +16,7 @@ body {
 }
 
 .criteriaPage {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .fade-left {

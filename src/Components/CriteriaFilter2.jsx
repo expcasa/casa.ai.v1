@@ -86,6 +86,7 @@ const CriteriaFilter2 = ({ selectedCriteria, onApplyFilters, className }) => {
       // Save selection to local storage
       localStorage.setItem(selectedCriteria, JSON.stringify(criteriaData));
       localStorage.setItem(`${selectedCriteria}_dotColor`, criteriaData.selection.priority);
+      localStorage.setItem(`${selectedCriteria}_isChecked`, JSON.stringify(isChecked));
       // Optionally notify parent component
       onApplyFilters({ [selectedCriteria]: criteriaData });
       window.location.reload();
@@ -96,6 +97,7 @@ const CriteriaFilter2 = ({ selectedCriteria, onApplyFilters, className }) => {
     // Remove selection and checkbox state from localStorage
     localStorage.removeItem(selectedCriteria);
     localStorage.removeItem(`${selectedCriteria}_dotColor`);
+    localStorage.removeItem(`${selectedCriteria}_isChecked`);
 
     // Reset selection and checkbox state
     setSelection({ yesOrNo: null, priority: "" });
