@@ -130,7 +130,7 @@ const ComparisonMain = ({ isTotalVisible }) => {
                 <div className="flex justify-center items-center h-full text-lg 3xl:text-2xl">
                   <p
                     className={`text-center data-compare-1 ${
-                      property.price?.value === 75000
+                      property.price?.value === 750000
                         ? "bg-light-green text-black opacity-80 px-3.5 py-0.4 inline-block"
                         : ""
                     }`}
@@ -247,9 +247,18 @@ const ComparisonMain = ({ isTotalVisible }) => {
                   </p>
                 </div>
 
-                <p className="text-center data-compare-11 text-lg 3xl:text-2xl">
+                <div className="flex justify-center items-center h-full text-lg 3xl:text-2xl">
+                <p
+                    className={`text-center data-compare-11 ${
+                      property.dogPark?.value === 10
+                        ? "bg-light-green text-black opacity-80 px-7 py-0.4 inline-block"
+                        : ""
+                    }`}
+                  >
+                
                   {property.dogPark?.value || "N/A"}
                 </p>
+                </div>
               </div>
               {/* Total Number Only */}
               {isTotalVisible && (
