@@ -56,14 +56,15 @@ const CriteriaFilter3 = ({ selectedCriteria, onApplyFilters, className }) => {
   const [priority, setPriority] = useState("");
   const [isChecked, setIsChecked] = useState(true);
 
+  const options = ["Any", "1+", "2+", "3+", "4+", "5+"];
+
   useEffect(() => {
-    // Load saved option and priority from local storage on component mount
-    const savedOption = JSON.parse(localStorage.getItem(selectedCriteria))?.option || "";
-    const savedPriority = JSON.parse(localStorage.getItem(selectedCriteria))?.priority || "";
+    // Load saved data from localStorage on component mount
+    const savedData = JSON.parse(localStorage.getItem(selectedCriteria)) || {};
     const savedIsChecked = JSON.parse(localStorage.getItem(`${selectedCriteria}_isChecked`)) || true;
 
-    setSelectedOption(savedOption);
-    setPriority(savedPriority);
+    setSelectedOption(savedData.option || "");
+    setPriority(savedData.priority || "");
     setIsChecked(savedIsChecked);
   }, [selectedCriteria]);
 
@@ -75,9 +76,7 @@ const CriteriaFilter3 = ({ selectedCriteria, onApplyFilters, className }) => {
     setPriority(priorityValue);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
     if (onApplyFilters) {
       onApplyFilters({
         [selectedCriteria]: {
@@ -87,53 +86,36 @@ const CriteriaFilter3 = ({ selectedCriteria, onApplyFilters, className }) => {
       });
     }
 
-    // Store selected option, priority, and checked state in local storage
-    localStorage.setItem(selectedCriteria, JSON.stringify({ option: selectedOption, priority }));
+    localStorage.setItem(
+      selectedCriteria,
+      JSON.stringify({ option: selectedOption, priority })
+    );
     localStorage.setItem(`${selectedCriteria}_isChecked`, JSON.stringify(isChecked));
     localStorage.setItem(`${selectedCriteria}_dotColor`, priority);
 
-    // Reload the page after saving
-    window.location.reload();
-  };
-  const handleInputChange = (e, type) => {
-    const value = e.target.value;
-    setFilters((prev) => ({
-      ...prev,
-      [type]: value,
-    }));
-  };
-
-  const handleApplyFilters = () => {
-    if (onApplyFilters) {
-      onApplyFilters({ [selectedCriteria]: filters });
-    }
-
-    localStorage.setItem(selectedCriteria, JSON.stringify(filters));
-    localStorage.setItem(`${selectedCriteria}_isChecked`, JSON.stringify(isChecked));
-    localStorage.setItem(`${selectedCriteria}_dotColor`, filters.priority);
-
     window.location.reload();
   };
 
-  const handleClearFilters = () => {
-    // Remove filters and checkbox state from localStorage
+  const handleClear = () => {
     localStorage.removeItem(selectedCriteria);
     localStorage.removeItem(`${selectedCriteria}_isChecked`);
     localStorage.removeItem(`${selectedCriteria}_dotColor`);
 
-    // Reset filters and checkbox state
-    setFilters({ min: "", max: "", priority: "" });
+    setSelectedOption("");
+    setPriority("");
     setIsChecked(false);
+
     window.location.reload();
   };
-
-  const options = ["Any", "1+", "2+", "3+", "4+", "5+"];
 
   return (
     <div className="relative">
       <form
-        onSubmit={handleSubmit}
-        className={`absolute top-0 left-0 w-80 h-80 bg-white text-black p-4 rounded-lg mt-4 shadow-md z-10 ${className} 3xl:w-[26rem] 3xl:h-[25rem]`}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+        className={`absolute top-0 left-0 w-50 h-70 bg-white text-black p-4 rounded-lg mt-4 shadow-md z-10 ${className} 3xl:w-[26rem] 3xl:h-[25rem]`}
       >
         {/* Title and Toggle */}
         <div className="flex justify-between items-center mb-4">
@@ -159,81 +141,75 @@ const CriteriaFilter3 = ({ selectedCriteria, onApplyFilters, className }) => {
           </label>
         </div>
 
-        {/* Option Buttons */}
+        {/* Options */}
         <div className="flex space-x-2 mt-2 overflow-x-auto">
           {options.map((option) => (
             <button
               type="button"
               key={option}
-              className={`flex items-center justify-center border-2 cursor-pointer rounded-lg h-10 w-12 ${
-                selectedOption === option
-                  ? "bg-black text-white"
-                  : "border-gray-300 bg-gray-200 hover:bg-gray-300"
-              } 3xl:h-14 3xl:w-16`}
+              className={`flex items-center justify-center border-2 3xl:w-44 3xl:h-15 3xl:p-2 3xl:text-2xl rounded-lg h-10 w-12 ${
+                selectedOption === option ? "bg-black text-white" : "bg-gray-200"
+              }`}
               onClick={() => handleOptionChange(option)}
             >
-              <span className="text-center text-sm font-medium 3xl:text-xl">{option}</span>
+              {option}
             </button>
           ))}
         </div>
 
-        <hr className="mt-3 bg-gray opacity-55" />
+        <hr className="mt-3" />
 
-        {/* Priority Buttons */}
         <div className="flex items-center mt-2 space-x-1">
           <h3 className="font-semibold 3xl:text-2xl">Priority</h3>
           <TooltipWithHelperIcon />
         </div>
-        <div className="flex items-center space-x-2 justify-start mt-3 p-1 rounded">
-          <label>
-            <input
-              type="button"
-              value="High"
-              onClick={() => handlePriorityChange("Must")}
-              className={`bg-gray-200 py-2 px-4 rounded-lg w-20 border cursor-pointer hover:bg-must-hover hover:text-white active:bg-must-active active:text-must-text focus:bg-must-active focus:text-must-text ${
-                priority === "Must" ? "bg-must-active text-must-text" : ""
-              } 3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
-            />
-          </label>
-          <label>
-            <input
-              type="button"
-              value="Medium"
-              onClick={() => handlePriorityChange("Should")}
-              className={`bg-gray-200 py-2 px-4 rounded-lg w-22 border cursor-pointer hover:bg-Should-hover hover:text-white active:bg-Should-active active:text-Should-text focus:bg-Should-active focus:text-Should-text ${
-                priority === "Should" ? "bg-Should-active text-Should-text" : ""
-              } 3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
-            />
-          </label>
-          <label>
-            <input
-              type="button"
-              value="Low"
-              onClick={() => handlePriorityChange("Good")}
-              className={`bg-gray-200 py-2 px-4 rounded-lg w-20 border cursor-pointer hover:bg-Good-hover hover:text-white active:bg-Good-active active:text-Good-text focus:bg-Good-active focus:text-Good-text ${
-                priority === "Good" ? "bg-Good-active text-Good-text" : ""
-              } 3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
-            />
-          </label>
-        </div>
 
-        {/* Save Button */}
-        <div className="flex flex-row">
+        {/* Priority Buttons */}
+        <div className="flex items-center space-x-3 justify-start mt-3 p-1 rounded">
           <button
             type="button"
-            onClick={handleClearFilters}
-            className="p-2 w-[100px] mt-4 ml-5 rounded-3xl bg-black text-white text-center text-sm 3xl:w-44 3xl:text-2xl"
+            className={`bg-gray-200 py-2 px-4 rounded-lg w-24 border cursor-pointer hover:bg-must-hover hover:text-white active:bg-must-active active:text-must-text focus:bg-must-active focus:text-must-text ${
+              priority === "Must" ? "bg-must-active text-must-text" : ""
+            } 3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
+            onClick={() => handlePriorityChange("Must")}
+          >
+            High
+          </button>
+          <button
+            type="button"
+            className={`bg-gray-200 py-2 px-4 rounded-lg w-26 border cursor-pointer hover:bg-Should-hover hover:text-white active:bg-Should-active active:text-Should-text focus:bg-Should-active focus:text-Should-text ${
+              priority === "Should" ? "bg-Should-active text-Should-text" : ""
+            } 3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
+            onClick={() => handlePriorityChange("Should")}
+          >
+            Medium
+          </button>
+          <button
+            type="button"
+            className={`bg-gray-200 py-2 px-4 rounded-lg w-24 border cursor-pointer hover:bg-Good-hover hover:text-white active:bg-Good-active active:text-Good-text focus:bg-Good-active focus:text-Good-text ${
+              priority === "Good" ? "bg-Good-active text-Good-text" : ""
+            }3xl:w-[7.3rem] 3xl:py-4  3xl:text-2xl`}
+            
+            onClick={() => handlePriorityChange("Good")}
+          >
+            Low
+          </button>
+        </div>
+
+        <div className="flex flex-row pl-5 3xl:pl-0">
+          <button
+            type="button"
+            onClick={handleClear}
+            className="p-2 w-[110px] mt-4 ml-5 rounded-3xl bg-black text-white text-center text-sm 3xl:w-44 3xl:text-2xl"
           >
             Clear
           </button>
           <button
-            type="button"
-            onClick={handleApplyFilters}
-            className="p-2 w-[100px] mt-4 ml-5 rounded-3xl bg-black text-white text-center text-sm 3xl:w-44 3xl:text-2xl"
+            type="submit"
+            className="p-2 w-[110px] mt-4 ml-5 rounded-3xl bg-black text-white text-center text-sm 3xl:w-44 3xl:text-2xl"
           >
             Save
           </button>
-          
         </div>
       </form>
     </div>

@@ -219,6 +219,21 @@ export const ButtonGroupVariants = () => {
     return 'transparent';
   };
 
+  const getStyleForCriteria = (criteria) => {
+    const isChecked = JSON.parse(localStorage.getItem(`${criteria}_isChecked`));
+    return {
+      iconStyle: {
+        filter: isChecked ?  "brightness(20%)": "brightness(100%)",
+        transform: isChecked ? "scale(1.1)": "scale(1)" , // Slightly larger
+      },
+      textStyle: {
+        color: isChecked ? "#333" : "#000", // Darken the text
+        fontWeight: isChecked ? "bold" : "light", // Make the text bold if checked
+        opacity:isChecked ? "1" : "0.5",
+      },
+    };
+  };
+
   // Scroll handling functions
   const scrollLeft = () => {
     if (buttonGroupRef.current) {
@@ -266,9 +281,10 @@ export const ButtonGroupVariants = () => {
                 src="/Criteria icons (1).svg"
                 alt="Price Icon"
                 className="button-icon w-6 h-6 3xl:w-10 3xl:h-10"
+                style={getStyleForCriteria("price").iconStyle}
               />
             </div>
-            <span>Price</span>
+            <span className="opacity-50" style={getStyleForCriteria("price").textStyle}>Price</span>
           </Button>
 
         <Button
@@ -285,9 +301,11 @@ export const ButtonGroupVariants = () => {
               src="/Vector.svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Years Built").iconStyle}
             />
           </div> 
-          Year Built
+          <span style={getStyleForCriteria("Years Built").textStyle}>Year Built</span>
+          
         </Button>
 
         <Button
@@ -304,10 +322,12 @@ export const ButtonGroupVariants = () => {
               src="/Rectangle 73.svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Square Foot").iconStyle}
             />
 
           </div>
-          Square Foot
+          <span style={getStyleForCriteria("Square Foot").textStyle}>Square Foot</span>
+          
         </Button>
         
 
@@ -325,9 +345,11 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (6).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Bedrooms").iconStyle}
             />
           </div>
-          Bedrooms
+          <span style={getStyleForCriteria("Bedrooms").textStyle}>Bedrooms</span>
+          
         </Button>
 
         <Button
@@ -344,9 +366,11 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (8).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Bathroom").iconStyle}
             />
           </div>
-          Bathroom
+          <span style={getStyleForCriteria("Bathroom").textStyle}>Bathroom</span>
+          
         </Button>
 
         {/* <Button
@@ -379,9 +403,11 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (3).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("School Rating").iconStyle}
             />
           </div>
-          School Rating
+          <span style={getStyleForCriteria("School Rating").textStyle}>School Rating</span>
+          
         </Button>
 
         {/* <Button
@@ -414,9 +440,11 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (7).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Office Distance").iconStyle}
             />
           </div>
-          Office Distance
+          <span style={getStyleForCriteria("Office Distance").textStyle}>Office Distance</span>
+          
         </Button>
 
         <Button
@@ -433,9 +461,10 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (5).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Swimming Pool").iconStyle}
             />
           </div>
-          Swimming Pool
+          <span style={getStyleForCriteria("Swimming Pool").textStyle}>Swimming Pool</span>
         </Button>
 
         <Button
@@ -452,9 +481,11 @@ export const ButtonGroupVariants = () => {
               src="/Criteria icons (9).svg"
               alt="Top Left"
               className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
+              style={getStyleForCriteria("Dog Park").iconStyle}
             />
           </div>
-          Dog Park
+          <span style={getStyleForCriteria("Dog Park").textStyle}>Dog Park</span>
+
         </Button>
 
         <Button 
@@ -466,7 +497,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Exterior Look
+          <span style={getStyleForCriteria("Exterior Look").textStyle}>Exterior Look</span>
         </Button>
 
         <Button
@@ -479,7 +510,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Garage
+          <span style={getStyleForCriteria("Garage").textStyle}>Garage</span>
         </Button>
 
         <Button 
@@ -491,7 +522,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Sun Light
+          <span style={getStyleForCriteria("Sun Light").textStyle}>Sun Light</span>
         </Button>
 
         <Button 
@@ -503,7 +534,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Outside View
+          <span style={getStyleForCriteria("Outside View").textStyle}>Outside View</span>
         </Button>
 
         <Button 
@@ -515,7 +546,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Grocery Store
+          <span style={getStyleForCriteria("Grocery Store").textStyle}>Grocery Store</span>
         </Button>
 
         <Button 
@@ -527,7 +558,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10" 
           />
-          Children Activity
+          <span style={getStyleForCriteria("Children Activity").textStyle}>Children Activity</span>
         </Button>
 
         <Button 
@@ -539,7 +570,7 @@ export const ButtonGroupVariants = () => {
             alt="Top Left"
             className="button-icon w-6 h-6 3xl:w-10 3xl:h-10"  
           />
-          College
+          <span style={getStyleForCriteria("College").textStyle}>College</span>
         </Button>
 
           {/* Add other buttons following the same pattern */}

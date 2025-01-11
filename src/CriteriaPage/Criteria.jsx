@@ -10,11 +10,8 @@ function Criteria() {
   return (
     <>
       <CriteriaNavbar onSearchChange={setSearchText} />
-
-      <div className="criteriaPage">
-        <ButtonGroupVariants />
-        <CriteriaMain searchText={searchText} />
-      </div>
+      <ButtonGroupVariants />
+      <CriteriaMain searchText={searchText} />
     </>
   );
 }

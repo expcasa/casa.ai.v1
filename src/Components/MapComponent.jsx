@@ -56,25 +56,36 @@ const MapComponent = ({ markerType }) => {
       properties = propertyData.slice(30, 41);
     }
 
+    const formatPriceWithK = (price) => {
+      const priceValue = Math.floor(price / 1000); // Get first three digits
+      return `${priceValue}k`;
+    };
+  
     // Update marker arrays
     setPercentageMarkerBlack(
       properties.slice(0, 10).map((prop) => ({
         ...generateRandomPosition(),
-        label: usePrices ? "$"+prop.price.value : prop.Percentage, // Show prices or percentages
+        label: usePrices
+          ? `$${formatPriceWithK(prop.price.value)}`
+          : prop.Percentage, // Show formatted price or percentages
       }))
     );
-
+  
     setPercentageMarkerBlue(
       properties.slice(7, 9).map((prop) => ({
         ...generateRandomPositionBlue(),
-        label: usePrices ? prop.price.value : prop.Percentage,
+        label: usePrices
+          ? `$${formatPriceWithK(prop.price.value)}`
+          : prop.Percentage,
       }))
     );
-
+  
     setPercentageMarkerPurple(
       properties.slice(9, 10).map((prop) => ({
         ...generateRandomPositionPurple(),
-        label: usePrices ? prop.price.value : prop.Percentage,
+        label: usePrices
+          ? `$${formatPriceWithK(prop.price.value)}`
+          : prop.Percentage,
       }))
     );
 
@@ -87,7 +98,7 @@ const MapComponent = ({ markerType }) => {
       <img
         src={Map}
         alt="Map view"
-        className="w-screen h-screen object-cover"
+        className="w-screen h-full object-cover"
       />
       {/* Render black markers */}
       {percentageMarkerBlack.map((pointer, index) => (
