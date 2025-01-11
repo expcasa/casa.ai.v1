@@ -5,7 +5,7 @@ function HeroSection() {
     <div className="max-w-screen-2xl container mx-auto md:px-14 px-4 hero-main">
       <div
       id="HeroSection"
-        className=" bg-cover bg-center flex items-center justify-center mt-5 ml-24 mr-28 mb-20 h-c40 w-650 rounded-3xl  hero-banner "
+        className=" bg-cover bg-center flex items-center justify-center mt-5 ml-24 mr-28 mb-20 h-c40 w-650 rounded-3xl  hero-banner 3xl:relative left-80 "
         style={{
           backgroundImage: "url(Banner.png)",
         }}

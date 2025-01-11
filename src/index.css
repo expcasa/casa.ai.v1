@@ -250,8 +250,9 @@ html {
   .contact-footer {
     font-size: 22px;
   }
+}
   /* landing end */
-  @media (min-width: 2300px) {
+  /* @media (min-width: 2300px) {
     .main-nav {
       max-width: 3000px;
     }
@@ -260,11 +261,11 @@ html {
     }
     .txt-compare {
       font-size: 30px;
-    }
+    } */
     /* compare-nav end */
 
     /* Compare-top */
-    @media (min-width: 1600px) {
+    /* @media (min-width: 1600px) {
       .compare-top {
         max-width: 3072px;
         margin-top: 90px;
@@ -281,9 +282,9 @@ html {
         width: 400px;
         height: 45px;
       }
-    }
+    } */
 
-    @media (min-width: 2300px) {
+    /* @media (min-width: 2300px) {
       .main-compare {
         max-width: 3072px;
         position: relative;
@@ -420,4 +421,4 @@ html {
     }
   }
 }
-
+ */

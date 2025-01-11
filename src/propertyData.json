@@ -698,8 +698,8 @@
     "childrenActivityCenter": { "value": true, "priority": "good" },
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg" },
-    "address": "Tennyson Pkwy, Plano, TX 75024",
-    "Percentage": "83.6%",
+    "address": "2128 Creekbluff Ct, TX 75024",
+    "Percentage": "77.7%",
     "Total":"192.42"
 
   },
@@ -724,8 +724,8 @@
     "childrenActivityCenter": { "value": true, "priority": "good" },
     "collegeNearby": { "value": true, "priority": "should" },
     "Image": { "value": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" },
-    "address": "Tennyson Pkwy, Plano, TX 75024",
-    "Percentage": "85.5%",
+    "address": "2153 Balcones Dr, TX 75024",
+    "Percentage": "75.0%",
     "Total":"194.94"
 
   },
@@ -735,14 +735,14 @@
     "yearsBuilt": { "value": 2019, "priority": "good" },
     "squareFoot": { "value": 3565, "priority": "must" },
     "lotSize": { "value": 5350, "priority": "good" },
-    "swimmingPool": { "value": 0.00, "priority": "should" },
+    "swimmingPool": { "value": 1.00, "priority": "should" },
     "schoolRating": { "value": 8, "priority": "must" },
     "schoolDistance": { "value": 0.2, "priority": "good" },
     "officeDistance": { "value": 4.5, "priority": "should" },
     "bedrooms": { "value": 4, "priority": "must" },
     "bathrooms": { "value": 4.5, "priority": "must" },
     "garage": { "value": true, "priority": "should" },
-    "dogPark": { "value": true, "priority": "good" },
+    "dogPark": { "value": 1.00, "priority": "good" },
     "exteriorLook": { "value": "Tudor", "priority": "good" },
     "sunlight": { "value": "West", "priority": "good" },
     "outsideView": { "value": "Historical District", "priority": "should" },
@@ -750,8 +750,8 @@
     "childrenActivityCenter": { "value": false, "priority": "good" },
     "collegeNearby": { "value": true, "priority": "should" },
     "Image": { "value": "https://housing-images.n7net.in/4f2250e8/5676dbdf134ea1106465653926a539e8/v0/small/casa_brilhante-parra-goa-rio_luxury_homes.jpeg" },
-    "address": "Tennyson Pkwy, Plano, TX 75024",
-    "Percentage": "95.9%",
+    "address": " 9916 Vistadale Dr, TX 75238 ",
+    "Percentage": "74.0%",
     "Total":"202.14"
 
   },

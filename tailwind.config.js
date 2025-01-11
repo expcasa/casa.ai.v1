@@ -40,6 +40,7 @@ export default {
       'property-TMbg':'#8c34d1',
       'lightpurple':'#EED9FF',
       'darkpurple':'#6C27A3',
+      'light-green':'#90EE90'
     },
     extend: {
       spacing:{
