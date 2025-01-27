@@ -12,7 +12,10 @@ function home() {
       <HeroSection />
       <Services />
       <Testimonials />
+      <div>
+
       <Footer />
+      </div>
 
     </div>
     </>

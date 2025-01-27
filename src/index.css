@@ -14,7 +14,41 @@
 body {
   font-family: "Inter";
   font-weight: 500;
-  overflow-x: hidden;
+  background-color: #ffffff; /* Your original background color */
+  color: #000000; /* Your original text color */
+}
+
+
+/* Override dark theme preferences */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff; /* Override dark mode background */
+    color: #000000; /* Override dark mode text */
+  }
+
+  .cards{
+    background-color: #ffffff; /* Override dark mode background */
+  }
+
+  .textbox{
+    background-color: #ffffff; /* Override dark mode background */
+  }
+
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    background-color: #ffffff; /* Override dark mode background */
+    color-scheme: light; /* Ensure light mode styles are used */
+  }
+
+  .searchbar {
+    background-color: #e5e5e5; /* Light gray color for the search bar */
+    border-radius: 9999px; /* Ensure it's rounded */
+    padding: 0.5rem 2.5rem; /* Adjust padding as needed */
+    outline: none; /* Remove the default outline */
+    width: 100%; /* Full width */
+    color: #6b6b6b; /* Set text color for contrast */
+  }
 }
 
 .criteriaPage {

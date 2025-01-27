@@ -153,7 +153,7 @@ const CriteriaFilter6 = ({ selectedCriteria, onApplyFilters, className }) => {
               value={filters.max}
               onChange={(e) => handleInputChange(e, "max")}
               placeholder="Max Miles"
-              className="bg-gray-200 py-2 px-4 rounded-lg w-28 items-start border no-scrollbar 3xl:py-5 3xl:px-8 3xl:w-44 3xl:text-2xl"
+              className="bg-gray-200 py-2 px-4 rounded-lg w-28 items-start border no-scrollbar 3xl:py-5 3xl:px-8 3xl:w-44 3xl:text-2xl textbox"
             />
           </label>
         </div>

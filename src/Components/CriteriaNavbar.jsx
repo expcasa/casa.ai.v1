@@ -42,7 +42,7 @@ export function CriteriaNavbar({ onSearchChange }) {
           <div className="relative w-1/4">
             <input
               type="text"
-              className="w-full p-2 pr-10 pl-6 rounded-full bg-base-300 text-black text-sm outline-none 3xl:h-30 3xl:text-2xl"
+              className="w-full p-2 pr-10 pl-6 rounded-full bg-base-300 text-black text-sm outline-none 3xl:h-30 3xl:text-2xl searchbar"
               placeholder="Search..."
               value={inputValue}
               onChange={handleInputChange} // Update on every keystroke
