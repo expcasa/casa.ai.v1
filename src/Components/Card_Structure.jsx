@@ -3,7 +3,7 @@ import React from "react";
 function Card_Structure({ item }) {
   return (
     <div className="m-1 pb-1">
-      <div className="card w-80 h-64 bg-base-100 hover:scale-105 duration-200 border-2 border-set rounded-lg px-4 py-3">
+      <div className="card w-80 h-64 bg-base-100 hover:scale-105 duration-200 border-2 border-set rounded-lg px-4 py-3 cards">
 
         <div className="mb-2 mt-2">
           <img src={item.svg} alt={item.h1} className="w-12 h-12" />
