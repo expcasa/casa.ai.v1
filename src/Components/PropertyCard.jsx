@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { RiVipCrownFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property, index }) => {
+
+  // const navigate = useNavigate();
+
+  // const handleCardClick = () => {
+  //   navigate(`/ProductDetail/${property.id}`);
+  // };
+
+
+
   const [showBestMatch, setShowBestMatch] = useState(false);
   const [showTopMatch, setShowTopMatch] = useState(false);
   const [isLocalStorageEmpty, setIsLocalStorageEmpty] = useState(true);
@@ -76,8 +86,11 @@ const PropertyCard = ({ property, index }) => {
         className="w-full h-48 3xl:h-80 object-cover rounded-t-lg"
       />
       <div className="pl-2 pt-2 text-property-text">
+      <Link to={"/ProductDetail"} className=" ">
         <div className="font-bold text-xl 3xl:text-2xl mb-1 text-black flex items-center">
-          ${property.price.value}
+          <Link to={"/ProductDetail"} className="hover:text-blue">
+            ${property.price.value}
+          </Link>
           {showTopMatch && (
             <span className="text-sm text-darkpurple ml-2 flex items-center rounded-full p-1 bg-lightpurple px-3 h-6">
               <RiVipCrownFill className="mr-1 text-base 3xl:text-lg" />
@@ -92,10 +105,18 @@ const PropertyCard = ({ property, index }) => {
           )}
         </div>
         <p className="text-gray-700 text-sm mb-1 3xl:text-lg">
-          {property.bedrooms.value} bds • {property.bathrooms.value} ba •{" "}
-          {property.squareFoot.value} sqft
+          <Link to={"/ProductDetail"} className="">
+            {property.bedrooms.value} bds • {property.bathrooms.value} ba •{" "}
+            {property.squareFoot.value} sqft
+          </Link>
         </p>
-        <p className="text-gray-600 text-sm 3xl:text-lg">{property.address}</p>
+
+        <p className="text-gray-600 text-sm 3xl:text-lg">
+          <Link to={"/ProductDetail"} className="">
+            {property.address}
+          </Link>
+        </p>
+        </Link>
       </div>
     </div>
   );
