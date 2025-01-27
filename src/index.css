@@ -140,6 +140,10 @@ html {
   transform: translateY(-10px);
 }
 
+.uppercase {
+  text-transform: capitalize;
+}
+
 /* This is for 67% of windows */
 @media (min-width: 2300px) {
   .button-text {
