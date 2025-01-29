@@ -49,6 +49,27 @@ body {
     width: 100%; /* Full width */
     color: #6b6b6b; /* Set text color for contrast */
   }
+
+  .stat-cards{
+    background-color: white;
+  }
+  .property-details-modal{
+    background-color: white;
+  }
+  .property-details-icons{
+    background-color: white;
+  }
+
+  .property-details-modal .btn {
+    background-color: #ececec; /* Dark grey background */
+    color: black; /* White text for better contrast */
+    border-color: #E2E3E9;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .property-details-modal .btn:hover {
+    background-color: #d8d8d8; /* Slightly lighter grey on hover */
+  }
 }
 
 .criteriaPage {

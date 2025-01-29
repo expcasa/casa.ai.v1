@@ -22,7 +22,7 @@ const PropertyCard = ({ property, index }) => {
     const hasData = Object.keys(localStorage).length > 0;
     const priceIsChecked = localStorage.getItem("price_isChecked") === "true";
     const otherKeysChecked = Object.keys(localStorage).some(
-      (key) => key !== "price_isChecked" && localStorage.getItem(key) === "true"
+      (key) => key == "price_isChecked" && localStorage.getItem(key) === "true"
     );
 
     setIsLocalStorageEmpty(!hasData);

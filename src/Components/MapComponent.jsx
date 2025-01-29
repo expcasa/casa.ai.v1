@@ -89,8 +89,8 @@ const MapComponent = ({ markerType }) => {
       }))
     );
 
-    setShowBlueMarkers(!!yearsBuiltIsChecked);
-    setShowPurpleMarkers(!!yearsBuiltIsChecked);
+    setShowBlueMarkers(!!priceIsChecked);
+    setShowPurpleMarkers(!!priceIsChecked);
   }, [usePrices]); // Recalculate when `usePrices` changes
 
   return (

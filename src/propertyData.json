@@ -21,7 +21,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://listingmedia7.harstatic.com/443232418/hr/1.jpeg?ts=2024-09-14T18:45:27.880", "priority": "good" },
     "address": "2416 Haft Riv Rd",
-    "Percentage": "95.4%"
+    "Percentage": "50%"
   },
   {
     "id": 2,
@@ -45,7 +45,7 @@
     "collegeNearby": { "value": true, "priority": "good" },
     "Image": { "value": "https://listingmedia7.harstatic.com/444403969/hr/1.jpeg?ts=2024-09-20T07:44:13.823", "priority": "good" },
     "address": "11758 Mikaela Dr",
-     "Percentage": "90.2%"
+     "Percentage": "63.2%"
 
   },
   {
@@ -70,7 +70,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://ssl.cdn-redfin.com/photo/595/mbphoto/C40/genMid.969C954B5C40_0.jpg", "priority": "good" },
     "address": "3366 Floral Mews",
-      "Percentage": "89.1%"
+      "Percentage": "66.1%"
 
   },
   {
@@ -95,7 +95,7 @@
     "collegeNearby": { "value": true, "priority": "good" },
     "Image": { "value": "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=600", "priority": "good" },
     "address": "15063 Grand Highlands Rd",
-    "Percentage": "88.4%"
+    "Percentage": "68.4%"
 
 
   },
@@ -121,7 +121,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://images1.showcase.com/i2/BQUmJBsGhK80lWfDXboVaVoOoOKQ_BRMnMUvw-ugTtw/115/image.jpg", "priority": "good" },
     "address":"1143 Holford Dr",
-    "Percentage": "82.23%"
+    "Percentage": "70.23%"
 
    },
   {
@@ -146,7 +146,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&w=600", "priority": "good" },
     "address":"9 ARMSTRONG DR",
-    "Percentage": "80.4%"
+    "Percentage": "73.4%"
 
 
   },
@@ -197,7 +197,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://images1.showcase.com/i2/0zecLp1AL51hKMzTyHw3kfrqPDqga-SMO9I3thUVmBk/115/image.jpg", "priority": "good" },
     "address": "25691 Smotherman Rd",
-    "Percentage": "64.2%"
+    "Percentage": "85.2%"
 
   },
   {
@@ -222,7 +222,7 @@
     "collegeNearby": { "value": true, "priority": "good" },
     "Image": { "value": "https://ssl.cdn-redfin.com/photo/595/mbphoto/098/genMid.D1141569B098_0.jpg", "priority": "good" },
     "address": "9758 Great Hall Ln",
-    "Percentage": "75.2%"
+    "Percentage": "89%"
 
   },
   {
@@ -247,7 +247,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://listingmedia7.harstatic.com/443968027/hr/1.jpeg?ts=2024-09-03T13:12:55.430", "priority": "good" },
      "address": "13165 Scissortail Dr",
-     "Percentage": "73.1%"
+     "Percentage": "95%"
 
   },
   {

@@ -26,7 +26,7 @@ const CriteriaMain = ({ searchText }) => {
       propertiesToRender = propertyData.slice(10, 20).reverse();
     } else if (priceIsChecked) {
       // Render items 0-10 if Price is checked
-      propertiesToRender = propertyData.slice(0, 10);
+      propertiesToRender = propertyData.slice(0, 10).reverse();
     } else {
       // Default to showing the first 10 if no criteria are checked
       propertiesToRender = propertyData.slice(30, 40).reverse();

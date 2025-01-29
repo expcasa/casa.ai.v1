@@ -238,7 +238,7 @@ function CardMain3() {
           {/* Modal */}
           {showModalCriteria && (
             <div className="modal modal-open">
-              <div className="modal-box w-c24.5 max-w-full overflow-hidden h-c30.5">
+              <div className="modal-box w-c24.5 max-w-full overflow-hidden h-c30.5 property-details-modal">
                 <h2 className="font-bold text-lg">Criteria</h2>
                 <hr className="border-t border-set mt-2" />
 
@@ -265,7 +265,7 @@ function CardMain3() {
                           <span className="ml-2">
                             <button>
                               {" "}
-                              <img src={Pencil} alt="Townhouse" />
+                              <img src={Pencil} alt="Townhouse" className="property-details-icons"/>
                             </button>
                           </span>
                         </p>
@@ -361,7 +361,7 @@ function CardMain3() {
           {/* Modal */}
           {showModal && (
             <div className="modal modal-open">
-              <div className="modal-box w-c30.5 max-w-full overflow-hidden h-c53">
+              <div className="modal-box w-c30.5 max-w-full overflow-hidden h-c46 property-details-modal">
                 <h2 className="font-bold text-lg">Amenities</h2>
                 <hr className="border-t border-gray-300 mt-2" />
 
@@ -377,7 +377,7 @@ function CardMain3() {
                           className="text-gray-600 hover:text-black"
                           onClick={() => handleAddAmenity(offer)}
                         >
-                          <CiCirclePlus className="w-6 h-6 text-gray" />
+                          <CiCirclePlus className="w-6 h-6 text-gray property-details-icons" />
                         </button>
                       </div>
                       {/* Horizontal Line */}
@@ -420,7 +420,7 @@ function CardMain3() {
 
         {/* Inline Date Section */}
         <div className="ml-3 mt-5 ">
-          <div className="stats bg-Advisor-card border rounded-md  ml-10 mt-2 mb-2 border-blue">
+          <div className="stats bg-Advisor-card border rounded-md  ml-10 mt-2 mb-2 border-blue stat-cards">
             <div className="stat flex flex-col">
               <div className="stat-title text-blue">Arp</div>
               <div className="stat-value text-blue">21</div>
@@ -428,7 +428,7 @@ function CardMain3() {
             </div>
           </div>
 
-          <div className="stats	border border-gray rounded-md ml-4 mt-2">
+          <div className="stats	border border-gray rounded-md ml-4 mt-2 stat-cards">
             <div className="stat ">
               <div className="stat-title ">Arp</div>
               <div className="stat-value text-gray">22</div>
@@ -436,7 +436,7 @@ function CardMain3() {
             </div>
           </div>
 
-          <div className="stats shadow border border-gray	 rounded-md ml-4 mt-2">
+          <div className="stats shadow border border-gray	 rounded-md ml-4 mt-2 stat-cards">
             <div className="stat ">
               <div className="stat-title ">Arp</div>
               <div className="stat-value text-gray">23</div>
