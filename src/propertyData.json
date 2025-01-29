@@ -697,7 +697,7 @@
     "collegeNearby": { "value": false, "priority": "should" },
     "Image": { "value": "https://xomesearch.propertiescdn.com/ListingImages/txdallas/images/0/0/20716250.jpg?cd=63865810800" },
     "address": "10004 Coit rd 122.227657 270",
-    "Percentage": "77.7%",
+    "Percentage": "85.7%",
     "Total":"192.42"
 
   },
@@ -723,7 +723,7 @@
     "collegeNearby": { "value": true, "priority": "should" },
     "Image": { "value": "https://ssl.cdn-redfin.com/photo/90/mbphoto/579/genMid.20743579_4.jpg" },
     "address": "25663 Smotherman Rd Unit 201",
-    "Percentage": "75.0%",
+    "Percentage": "89.0%",
     "Total":"194.94"
 
   },
@@ -749,7 +749,7 @@
     "collegeNearby": { "value": true, "priority": "should" },
     "Image": { "value": "https://xomesearch.propertiescdn.com/ListingImages/txdallas/images/0/0/20686144.jpg?cd=63858084660" },
     "address": "13612 Declan St",
-    "Percentage": "74.0%",
+    "Percentage": "94.0%",
     "Total":"202.14"
 
   },
