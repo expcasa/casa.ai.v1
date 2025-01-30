@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ComparisonTop({ isTotalVisible, setIsTotalVisible }) {
   return (
     <div className="max-w-screen-2xl container mx-auto ">
-    <div className="mt-28 ml-40 flex items-center justify-between compare-top">
+    <div className="pt-28 ml-40 flex items-center justify-between compare-top">
       <Link to={"/Criteria"}>
         <p className="text-gray inline-flex text-xl items-center arw-compare 3xl:text-3xl 3xl:right-40 3xl:relative top-28">
           <GoArrowLeft className="mr-2" />

@@ -25,6 +25,9 @@ body {
     background-color: #ffffff; /* Override dark mode background */
     color: #000000; /* Override dark mode text */
   }
+  html {
+    background-color: white !important;
+  }
 
   .cards{
     background-color: #ffffff; /* Override dark mode background */
